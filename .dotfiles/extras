@@ -1,0 +1,22 @@
+# Change the window title of X terminals
+case ${TERM} in
+	xterm*|rxvt*|Eterm*|aterm|kterm|gnome*|interix|konsole*)
+		PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\007"'
+		;;
+	screen*)
+		PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\033\\"'
+		;;
+esac
+
+# fix "xdg-open fork-bomb" export your preferred browser from here
+export BROWSER=/usr/bin/google-chrome-unstable
+
+# Webcam 
+export LD_PRELOAD=/usr/lib/libv4l/v4l2convert.so
+
+#Goto Alias
+source ~/.dotfiles/goto.sh
+alias g=goto
+
+#Stupid Android
+export ANDROID_EMULATOR_USE_SYSTEM_LIBS=1

@@ -1,0 +1,13 @@
+#Custom script
+export PATH=$PATH:$HOME/.dotfiles/scripts
+#GO
+export GOPATH=$HOME/Projects/go
+export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
+#RUST
+export PATH=$PATH:$HOME/.cargo/bin
+#ANDROID
+export ANDROID_HOME=$HOME/Android/Sdk
+export ANDROID_SDK_ROOT=$HOME/Android/Sdk
+export PATH=$PATH:${ANDROID_SDK_ROOT}/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools

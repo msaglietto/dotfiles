@@ -1,0 +1,48 @@
+! ------------------------------------------------------------------------------
+! Import Colour 
+! ------------------------------------------------------------------------------
+
+#include ".xrdb/color/nord"
+#include ".xrdb/rofi/nord"
+#include ".xrdb/dmenu/nord"
+! #include ".xrdb/fonts/tewi"
+
+! ------------------------------------------------------------------------------
+! URxvt configs
+! ------------------------------------------------------------------------------
+
+URxvt.geometry:         72x18
+URxvt*letterSpace:      0
+URxvt.letterSpace:      1
+URxvt.lineSpace:        0
+URxvt*internalBorder:   12
+URxvt*externalBorder:   0
+URxvt*depth:            32
+URxvt*saveline:         2000
+URxvt*termName:         rxvt-unicode-256color
+URxvt*iso14755:         false
+URxvt*scrollBar:        false
+URxvt*scrollBar_right:  false
+URxvt.copyCommand:      xclip -i -selection clipboard
+URxvt.pasteCommand:     xclip -o -selection clipboard
+URxvt.urlLauncher:      google-chrome-unstable
+URxvt.underlineURLs:    true
+URxvt.urlButton:        1
+URxvt*buffered:         false
+URxvt.urgentOnBell:     True
+
+#define termfont        xft:SauceCodePro Nerd Font:12
+URxvt.font:             termfont
+URxvt.boldFont:         termfont
+URxvt.italicFont:       termfont
+URxvt.boldItalicFont:   termfont
+! ------------------------------------------------------------------------------
+! Xft Font Configuration
+! ------------------------------------------------------------------------------
+
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintslight
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
