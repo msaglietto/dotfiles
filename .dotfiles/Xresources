@@ -1,10 +1,10 @@
 ! ------------------------------------------------------------------------------
-! Import Colour 
+! Import Colour
 ! ------------------------------------------------------------------------------
 
-#include ".xrdb/color/nord"
-#include ".xrdb/rofi/nord"
-#include ".xrdb/dmenu/nord"
+#include "xrdb/color/nord"
+#include "xrdb/rofi/nord"
+#include "xrdb/dmenu/nord"
 ! #include ".xrdb/fonts/tewi"
 
 ! ------------------------------------------------------------------------------
@@ -36,13 +36,14 @@ URxvt.font:             termfont
 URxvt.boldFont:         termfont
 URxvt.italicFont:       termfont
 URxvt.boldItalicFont:   termfont
+
 ! ------------------------------------------------------------------------------
 ! Xft Font Configuration
 ! ------------------------------------------------------------------------------
-
-Xft.autohint: 0
-Xft.lcdfilter: lcddefault
-Xft.hintstyle: hintslight
-Xft.hinting: 1
-Xft.antialias: 1
-Xft.rgba: rgb
+Xft*dpi: 102
+Xft*antialias:  true
+Xft*hinting:    true
+Xft*rgba:       rgb
+Xft*autohint:   false
+Xft*hintstyle:  hintfull
+Xft*lcdfilter:  lcddefault

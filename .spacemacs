@@ -33,11 +33,11 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(yaml
-     yaml
-     markdown
-     yaml
-     org
+     lua
      sql
+     lua
+     sql
+     org
      html
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
@@ -154,7 +154,7 @@ values."
    ;; SauceCodePro Nerd Font Mongo
    dotspacemacs-default-font '("SauceCodePro Nerd Font Mono"
                                :size 15
-                               :weight normal
+                               :weight semibold
                                :width normal
                                :powerline-scale 2)
    ;; The leader key
@@ -400,7 +400,7 @@ This function is called at the very end of Spacemacs initialization."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (toc-org persp-mode hl-todo google-translate flycheck evil-mc evil-matchit evil-escape evil-args editorconfig dumb-jump doom-themes doom-modeline counsel-projectile counsel ivy highlight iedit smartparens projectile window-purpose helm yasnippet multiple-cursors avy dash org-plus-contrib evil hydra ws-butler winum which-key web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package undo-tree tern symon swiper string-inflection spaceline-all-the-icons shrink-path restart-emacs request rainbow-delimiters prettier-js popwin popup pkg-info pcre2el password-generator paradox org-bullets open-junk-file neotree move-text lorem-ipsum livid-mode link-hint json-navigator json-mode js2-refactor js-doc indent-guide imenu-list hungry-delete highlight-parentheses highlight-numbers highlight-indentation helm-xref helm-themes helm-swoop helm-purpose helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag goto-chg golden-ratio font-lock+ flx-ido fill-column-indicator fancy-battery eyebrowse expand-region evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-numbers evil-nerd-commenter evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-goggles evil-exchange evil-ediff evil-cleverparens evil-anzu eval-sexp-fu eldoc-eval dotenv-mode diminish define-word column-enforce-mode clean-aindent-mode centered-cursor-mode auto-highlight-symbol aggressive-indent add-node-modules-path ace-window ace-link ace-jump-helm-line))))
+    (editorconfig doom-themes doom-modeline tern ws-butler winum which-key web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-bullets open-junk-file neotree move-text lorem-ipsum livid-mode skewer-mode simple-httpd linum-relative link-hint json-mode json-snatcher json-reformat js2-refactor yasnippet multiple-cursors js2-mode js-doc indent-guide hydra hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make projectile helm-flx helm-descbinds helm-ag google-translate golden-ratio flycheck pkg-info epl flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight dumb-jump diminish define-word column-enforce-mode coffee-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async org-plus-contrib evil-unimpaired f s dash))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -408,3 +408,17 @@ This function is called at the very end of Spacemacs initialization."
  ;; If there is more than one, they won't work right.
  )
 )
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (tern ws-butler winum which-key web-beautify volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-bullets open-junk-file neotree move-text lorem-ipsum livid-mode skewer-mode simple-httpd linum-relative link-hint json-mode json-snatcher json-reformat js2-refactor yasnippet multiple-cursors js2-mode js-doc indent-guide hydra hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make projectile helm-flx helm-descbinds helm-ag google-translate golden-ratio flycheck pkg-info epl flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight dumb-jump diminish define-word column-enforce-mode coffee-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async org-plus-contrib evil-unimpaired f s dash))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )

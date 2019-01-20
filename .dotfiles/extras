@@ -8,11 +8,10 @@ case ${TERM} in
 		;;
 esac
 
+export PROMPT='%{$fg[cyan]%}%1~%{$reset_color%}%{$fg[red]%}%{$reset_color%} $(git_prompt_info)%{$fg[white]%}🤔%{$reset_color%} '
+
 # fix "xdg-open fork-bomb" export your preferred browser from here
 export BROWSER=/usr/bin/google-chrome-unstable
-
-# Webcam 
-export LD_PRELOAD=/usr/lib/libv4l/v4l2convert.so
 
 #Goto Alias
 source ~/.dotfiles/goto.sh
