@@ -12,7 +12,7 @@ case "$1" in
         i3-msg exit
         ;;
     switch_user)
-       gnome-session-quit
+        i3-msg exit
         ;;
     suspend)
         blurlock && $logind suspend
@@ -21,10 +21,10 @@ case "$1" in
         blurlock && $logind hibernate
         ;;
     reboot)
-        $logind reboot
+        reboot
         ;;
     shutdown)
-        $logind poweroff
+        shutdown now
         ;;
     *)
         echo "== ! i3exit: missing or invalid argument ! =="

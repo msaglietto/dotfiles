@@ -38,7 +38,9 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec rofi-apps
 
 # Start Applications
-exec_always --no-startup-id ~/.dotfiles/scripts/polybar-start
+exec_always --no-startup-id xrdb -merge ~/.Xresources
+exec_always --no-startup-id polybar-start
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper.*
 
 # Screen brightness controls
 bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
@@ -54,8 +56,8 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
 
 # Bind Applications
 bindsym $mod+F2 exec google-chrome-unstable
-bindsym $mod+F3 exec nautilus
-bindsym $mod+Shift+F3 exec gksu nautilus
+bindsym $mod+F3 exec --no-startup-id nautilus
+bindsym $mod+Shift+F3 exec --no-startup-id gksu nautilus
 bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
