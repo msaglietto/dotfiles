@@ -53,9 +53,9 @@ foreground = ${colors.foreground}
 
 ; Misc
 fixed-center = true
-padding-left = 2 
-padding-right = 2
-module-margin = 2
+padding-left = 1 
+padding-right = 1
+module-margin = 1
 tray-position = right
 tray-detached = false
 ; tray-transparent = true
@@ -64,7 +64,14 @@ tray-background = #1d1f21
 ; Modules
 modules-left = i3
 ; modules-center =
-modules-right = spotify backlight battery wlan memory cpu date time
+modules-right = wlan memory date time battery
+
+; Montiro Config
+monitor = ${env:MONITOR_BASE}
+
+[bar/extra]
+inherit = bar/base
+monitor = ${env:MONITOR_EXTRA}
 
 
 [module/i3]
