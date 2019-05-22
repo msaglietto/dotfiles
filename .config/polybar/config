@@ -53,7 +53,7 @@ foreground = ${colors.foreground}
 
 ; Misc
 fixed-center = true
-padding-left = 1 
+padding-left = 1
 padding-right = 1
 module-margin = 1
 tray-position = right
@@ -63,8 +63,8 @@ tray-background = #1d1f21
 
 ; Modules
 modules-left = i3
-; modules-center =
-modules-right = wlan memory date time battery
+ modules-center = xwindow
+modules-right = nordvpn-status wlan memory date time battery backlight pulseaudio powermenu
 
 ; Montiro Config
 monitor = ${env:MONITOR_BASE}
@@ -72,6 +72,16 @@ monitor = ${env:MONITOR_BASE}
 [bar/extra]
 inherit = bar/base
 monitor = ${env:MONITOR_EXTRA}
+
+
+; Separators
+[module/separatorleft]
+type = custom/text
+content = "%{T3}%{T-}"
+
+[module/separatorright]
+type = custom/text
+content = "%{T3}%{T-}"
 
 
 [module/i3]
@@ -88,7 +98,7 @@ ws-icon-7 = 8;
 ws-icon-8 = 9;
 ws-icon-9 = 10;
 pin-workspaces = true
-strip-wsnumbers = true
+strip-wsnumbers = false
 enable-scroll = true
 
 format = <label-state> <label-mode>
@@ -108,6 +118,10 @@ label-urgent = %icon%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 1
 
+[module/xwindow]
+
+type = internal/xwindow
+label = "  %title:0:60:...%  "
 
 [module/time]
 type = internal/date
@@ -163,7 +177,7 @@ ramp-volume-2 = 
 
 [module/backlight]
 type = internal/backlight
-card = amdgpu_bl0 
+card = intel_backlight 
 
 format-spacing = 1
 format = <ramp><label>
@@ -247,3 +261,8 @@ blacklist-0 = num lock
 blacklist-1 = scroll lock
 
 label-layout = %{T3}%{T-} %layout%
+
+[module/nordvpn-status]
+type = custom/script
+exec = ~/.dotfiles/scripts/polybar/vpn-nordvpn-status.sh
+interval = 30
