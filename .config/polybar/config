@@ -63,8 +63,8 @@ tray-background = #1d1f21
 
 ; Modules
 modules-left = i3
- modules-center = xwindow
-modules-right = nordvpn-status wlan memory date time battery backlight pulseaudio powermenu
+modules-center = xwindow
+modules-right = polypomo nordvpn-status wlan memory date time battery backlight pulseaudio powermenu
 
 ; Montiro Config
 monitor = ${env:MONITOR_BASE}
@@ -266,3 +266,16 @@ label-layout = %{T3}%{T-} %layout%
 type = custom/script
 exec = ~/.dotfiles/scripts/polybar/vpn-nordvpn-status.sh
 interval = 30
+
+[module/polypomo]
+type = custom/script
+
+exec = ~/.dotfiles/scripts/polybar/polypomo --worktime 2700 --breaktime 900
+tail = true
+
+label = %output%
+click-left = ~/.dotfiles/scripts/polybar/polypomo toggle
+click-right = ~/.dotfiles/scripts/polybar/polypomo end
+click-middle = ~/.dotfiles/scripts/polybar/polypomo lock
+scroll-up = ~/.dotfiles/scripts/polybar/polypomo time +1
+scroll-down = ~/.dotfiles/scripts/polybar/polypomo time -1
