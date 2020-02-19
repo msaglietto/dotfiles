@@ -1,5 +1,6 @@
 #Custom script
 export PATH=$PATH:$HOME/.dotfiles/scripts
+export PATH=$PATH:$HOME/.local/bin
 #GO
 export GOPATH=$HOME/Projects/go
 export PATH=$PATH:$GOPATH/bin:$GOROOT/bin

@@ -35,12 +35,14 @@ bindsym $mod+Shift+q kill
 
 # start program launcher
 # bindsym $mod+d exec --no-startup-id dmenu_recency
-bindsym $mod+d exec rofi-apps
+bindsym $mod+d exec ~/.dotfiles/scripts/rofi-apps
 
 # Start Applications
 exec_always --no-startup-id xrdb -merge ~/.Xresources
 exec_always --no-startup-id polybar-start
 exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper.*
+exec --no-startup-id xautolock -corners 0-0- -cornersize 30 -time 10 -locker blurlock
+
 
 # Screen brightness controls
 bindsym XF86MonBrightnessUp exec "xbacklight -inc 10; notify-send 'brightness up'"
@@ -61,9 +63,6 @@ bindsym $mod+Shift+F3 exec --no-startup-id gksu nautilus
 bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
-
-# Pomodoro start and end notifications
-bindsym $mod+p exec notify-send --icon=gtk-info Pomodoro "Focus for 25 minutes" && sleep 2500 && notify-send --icon=gtk-info Pomodoro "Take a 5 minute break"
 
 # focus_follows_mouse no
 

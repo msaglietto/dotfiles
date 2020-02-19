@@ -1,0 +1,5 @@
+#!/bin/bash
+external
+polybar-start
+sudo apt update && sudo apt upgrade --yes
+nordvpn c
