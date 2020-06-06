@@ -13,17 +13,13 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'prettier/vim-prettier'
+
 let g:AutoPairsShortcutFastWrap = ''
 Plugin 'dyng/ctrlsf.vim'
 nmap <C-S-f> <Plug>CtrlSFPrompt
 
-set completeopt=menuone
-let g:ycm_complete_in_comments = 1
-let g:ycm_confirm_extra_conf = 0
-
-Plugin 'rdnetto/YCM-Generator'
-" let g:ycm_add_preview_to_completeopt = 0
-" let g:ycm_autoclose_preview_window_after_completion = 1
 Plugin 'michaeljsmith/vim-indent-object'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -39,25 +35,17 @@ endif
 Plugin 'kien/ctrlp.vim'
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 let g:ctrlp_custom_ignore = {
-  \ 'dir': '\v[\/](node_modules|bower_components|docs|dist)$',
+  \ 'dir': '\v[\/](node_modules|docs|dist)$',
   \ }
-
-Plugin 'benekastah/neomake'
-au BufWritePost * Neomake!
 
 Plugin 'majutsushi/tagbar'
 nmap <F6> :TagbarToggle<CR>
 
 Plugin 'gregsexton/MatchTag'
-Plugin 'jamessan/vim-gnupg'
 
 " Syntax highlighting / programming language environments
-Plugin 'rust-lang/rust.vim'
-Plugin 'cespare/vim-toml'
-Plugin 'fatih/vim-go'
 let g:go_fmt_fail_silently = 1
 
-Plugin 'PotatoesMaster/i3-vim-syntax'
 Plugin 'Matt-Deacalion/vim-systemd-syntax'
 Plugin 'plasticboy/vim-markdown'
 let g:vim_markdown_folding_disabled=1
@@ -187,11 +175,11 @@ set showcmd         " Show the command being typed.
 
 set nofoldenable    " Don't fold.
 " tab/spaces settings (important for python)
-" tab = 4 space
+" tab = 2 space
 " set smartindent " (use autoindent because 'smart' fucks up python)
 set nosmartindent
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set textwidth=79
 set colorcolumn=80
@@ -279,27 +267,3 @@ au FileType go nmap <leader>gv <Plug>(go-vet)
 au FileType go nmap <leader>gi :call go#fmt#Format(1)<CR>:w<CR>
 " }}}
 
-" ExtraWhitespace used for tab indented files
-highlight ExtraWhitespace guibg=#6a3232
-fun! UpdateMatch()
-    let whitelist = ['go', 'c', 'h', 'java', 'make', 'cmake']
-    if index(whitelist, &ft) > 0
-        match ExtraWhitespace /\s\+$\|^\( \*\)\@!\t*\zs \+/
-    else
-        match NONE
-    endif
-endfun
-autocmd BufEnter,BufWinEnter * call UpdateMatch()
-
-map <F5> :make<CR>
-
-" Abbrivations
-iab py# #!/usr/bin/python
-iab rb# #!/usr/bin/ruby
-iab node# #!/usr/bin/node
-iab bash# #!/bin/bash
-iab stdio# #include <stdio.h>
-
-" Spell languages
-map <F7> :setl spell! spelllang=en<CR>
-map <F8> :setl spell! spelllang=da<CR>
