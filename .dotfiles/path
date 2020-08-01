@@ -1,14 +1,22 @@
 #Custom script
 export PATH=$PATH:$HOME/.dotfiles/scripts
 export PATH=$PATH:$HOME/.local/bin
+
 #GO
 export GOPATH=$HOME/Projects/go
 export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
+
 #RUST
 export PATH=$PATH:$HOME/.cargo/bin
+
 #ANDROID
 export ANDROID_HOME=$HOME/Android/Sdk
 export ANDROID_SDK_ROOT=$HOME/Android/Sdk
 export PATH=$PATH:${ANDROID_SDK_ROOT}/emulator
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+# Flutter
+export PATH=$PATH:$HOME/Projects/flutter/bin
+
+#EMACS
+export PATH=$PATH:$HOME/.emacs.d/bin
