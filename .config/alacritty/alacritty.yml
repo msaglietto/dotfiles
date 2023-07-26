@@ -41,6 +41,12 @@ window:
 
   dynamic_title: true
 
+  # Background opacity
+  #
+  # Window opacity as a floating point number from `0.0` to `1.0`.
+  # The value `0.0` is completely transparent and `1.0` is opaque.
+  opacity: 1.0
+
 scrolling:
   # Maximum number of lines in the scrollback buffer.
   # Specifying '0' will disable scrolling.
@@ -70,9 +76,9 @@ scrolling:
 #   - file:///usr/share/doc/fontconfig/fontconfig-user.html
 font:
   normal:
-    family: Hurmit Nerd Font Mono
+    family: Sauce Code Pro Nerd Font Mono
     # The `style` can be specified to pick a specific face.
-    #style: Regular
+    style: Semibold
   # Bold font face
   bold:
     family: Hurmit Nerd Font Mono
@@ -184,11 +190,6 @@ bell:
   animation: EaseOutExpo
   duration: 0
 
-# Background opacity
-#
-# Window opacity as a floating point number from `0.0` to `1.0`.
-# The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 1.0
 
 # Mouse bindings
 #
@@ -219,19 +220,6 @@ mouse:
 
   # If this is `true`, the cursor is temporarily hidden when typing.
   hide_when_typing: false
-
-  url:
-    # URL launcher
-    #
-    # This program is executed when clicking on a text which is recognized as a URL.
-    # The URL is always added to the command as the last parameter.
-    launcher: xdg-open
-
-    # URL modifiers
-    #
-    # These are the modifiers that need to be held down for opening URLs when clicking
-    # on them. The available modifiers are documented in the key binding section.
-    #modifiers: Control|Shift
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
@@ -353,7 +341,7 @@ key_bindings:
   - { key: Insert,   mods: Shift,   action: PasteSelection               }
   - { key: Key0,     mods: Control, action: ResetFontSize                }
   - { key: Equals,   mods: Control, action: IncreaseFontSize             }
-  - { key: Subtract, mods: Control, action: DecreaseFontSize             }
+  - { key: Minus, mods: Control, action: DecreaseFontSize             }
   - { key: N,        mods: Control, action: SpawnNewInstance             }
   - { key: Home,                    chars: "\x1bOH",   mode: AppCursor   }
   - { key: Home,                    chars: "\x1b[H",   mode: ~AppCursor  }
